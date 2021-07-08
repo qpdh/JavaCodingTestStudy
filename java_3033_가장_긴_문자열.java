@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.Vector;
 
-public class java_3033_°¡Àå_±ä_¹®ÀÚ¿­ {
+public class java_3033_ê°€ì¥_ê¸´_ë¬¸ìì—´ {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -28,7 +28,7 @@ public class java_3033_°¡Àå_±ä_¹®ÀÚ¿­ {
 		int result = 0;
 
 		while (minCount <= maxCount) {
-			// key : Hash °ª, value : firstIndex
+			// key : Hash ï¿½ï¿½, value : firstIndex
 			HashMap<Integer, Vector<Integer>> resultHash = new HashMap<>();
 			
 			isIn = false;
@@ -37,12 +37,12 @@ public class java_3033_°¡Àå_±ä_¹®ÀÚ¿­ {
 			int firstHash = 0;
 			int pow = 1;
 
-			// ´ÜÀ§ ±ÛÀÚ ¸¸Å­ µ¹¸é¼­ ÇØ½Ã ÀúÀå
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å­ ï¿½ï¿½ï¿½é¼­ ï¿½Ø½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			for (int firstIndex = 0; nowCount + firstIndex <= L; firstIndex++) {
 
 				isIn = false;
 				
-				// firstIndex ±âÁØ ÇØ½Ã°ª »ı¼º
+				// firstIndex ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
 				if (firstIndex == 0) {
 					for (int i = 0 + nowCount - 1; i >= 0; i--) {
 						firstHash = mod(firstHash + enter.charAt(i) * pow);
@@ -56,10 +56,10 @@ public class java_3033_°¡Àå_±ä_¹®ÀÚ¿­ {
 							+ enter.charAt(firstIndex + nowCount - 1);
 				}
 				
-				// ÇØ½Ã°ªÀÌ Áßº¹
+				// ï¿½Ø½Ã°ï¿½ï¿½ï¿½ ï¿½ßºï¿½
 				if (resultHash.get(firstHash) != null) {
-					// ÇØ½Ã¸Ê¿¡ ÀúÀåµÈ firstIndex ÀüºÎ °¡Á®¿À±â
-					// ½ÇÁ¦·Î °°Àº ´Ü¾îÀÎÁö ºñ±³
+					// ï¿½Ø½Ã¸Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ firstIndex ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 					for (Object t : resultHash.get(firstHash).toArray()) {
 						isIn = true;
 						
@@ -70,7 +70,7 @@ public class java_3033_°¡Àå_±ä_¹®ÀÚ¿­ {
 							}
 						}
 
-						// Áßº¹µÇ´Â ´Ü¾î°¡ Á¸Àç
+						// ï¿½ßºï¿½ï¿½Ç´ï¿½ ï¿½Ü¾î°¡ ï¿½ï¿½ï¿½ï¿½
 						if (isIn) {
 							result = nowCount;
 							minCount = nowCount + 1;
@@ -84,7 +84,7 @@ public class java_3033_°¡Àå_±ä_¹®ÀÚ¿­ {
 				if(isIn)
 					break;
 				
-				// ÇØ½Ã¸Ê¿¡ ÀúÀåµÈ firstIndex°¡ ¾øÀ½
+				// ï¿½Ø½Ã¸Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ firstIndexï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				else {
 					Vector<Integer> t = new Vector<>();
 					t.add(firstIndex);
