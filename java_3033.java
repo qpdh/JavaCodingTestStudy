@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.Vector;
 
-public class java_3033_가장_긴_문자열 {
+public class java_3033 {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 

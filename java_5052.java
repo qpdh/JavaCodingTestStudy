@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class java_5052_ÀüÈ­¹øÈ£_¸ñ·Ï {
+public class java_5052 {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -16,14 +16,14 @@ public class java_5052_ÀüÈ­¹øÈ£_¸ñ·Ï {
 		for (int i = 0; i < t; i++) {
 			int n = Integer.parseInt(br.readLine());
 
-			// n°³ ÀüÈ­¹øÈ£ ÀÔ·Â ¹Ş±â
+			// nï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ ï¿½Ô·ï¿½ ï¿½Ş±ï¿½
 			String stringArray[] = new String[n];
 
 			for (int j = 0; j < n; j++) {
 				stringArray[j] = br.readLine();
 			}
 
-			// ÀÏ°ü¼º Ã¼Å©
+			// ï¿½Ï°ï¿½ï¿½ï¿½ Ã¼Å©
 			checkConsistency(stringArray);
 		}
 
@@ -35,11 +35,11 @@ public class java_5052_ÀüÈ­¹øÈ£_¸ñ·Ï {
 
 		for (int i = 0; i < stringArray.length - 1; i++) {
 			for (int j = i + 1; j < stringArray.length; j++) {
-				// ±æÀÌ°¡ °°À¸¸é ºñ±³ÇÒ ÇÊ¿ä ¾øÀ½
+				// ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 				if (stringArray[i].length() == stringArray[j].length())
 					continue;
 
-				// ±æÀÌ°¡ ÂªÀº°Í ±âÁØÀ¸·Î °°Àº Áö ºñ±³
+				// ï¿½ï¿½ï¿½Ì°ï¿½ Âªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
 				int minStringLength = (stringArray[i].length() < stringArray[j].length()) ? stringArray[i].length()
 						: stringArray[j].length();
 
@@ -55,7 +55,7 @@ public class java_5052_ÀüÈ­¹øÈ£_¸ñ·Ï {
 	}
 
 	public static Boolean compareString(String a, String b, int minStringLength) throws IOException {
-		// ¹®ÀÚ¿­ ºñ±³
+		// ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½
 		for (int k = 0; k < minStringLength; k++) {
 			if (a.charAt(k) != b.charAt(k))
 				return false;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class java_9086_¹®ÀÚ¿­ {
+public class java_9086 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

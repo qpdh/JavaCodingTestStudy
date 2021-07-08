@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class java_7567_±×¸© {
+public class java_7567 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
