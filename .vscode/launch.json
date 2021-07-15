@@ -1,0 +1,56 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_2210",
+            "request": "launch",
+            "mainClass": "java_2210",
+            "projectName": "JavaCodingTestStudy_7c94d278"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_3033",
+            "request": "launch",
+            "mainClass": "java_3033",
+            "projectName": "JavaCodingTestStudy_7c94d278"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_5052",
+            "request": "launch",
+            "mainClass": "java_5052",
+            "projectName": "JavaCodingTestStudy_7c94d278"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_7567",
+            "request": "launch",
+            "mainClass": "java_7567",
+            "projectName": "JavaCodingTestStudy_7c94d278"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_7785",
+            "request": "launch",
+            "mainClass": "java_7785",
+            "projectName": "JavaCodingTestStudy_7c94d278"
+        },
+        {
+            "type": "java",
+            "name": "Launch java_9086",
+            "request": "launch",
+            "mainClass": "java_9086",
+            "projectName": "JavaCodingTestStudy_7c94d278"
+        }
+    ]
+}

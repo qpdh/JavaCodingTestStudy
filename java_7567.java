@@ -25,6 +25,7 @@ public class java_7567 {
 		
 		System.out.println(count);
 		
+		scanner.close();
 	}
 
 }

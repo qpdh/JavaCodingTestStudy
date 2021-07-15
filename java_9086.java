@@ -14,5 +14,7 @@ public class java_9086 {
 
 			System.out.println(str.charAt(0) + "" + str.charAt(str.length() - 1));
 		}
+
+		scanner.close();
 	}
 }

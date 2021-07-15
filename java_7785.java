@@ -5,10 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Collections;
 import java.util.Iterator;
-import java.util.StringTokenizer;
 import java.util.TreeSet;
-
-import jdk.jpackage.main.CommandLine.Tokenizer;
 
 public class java_7785 {
 
