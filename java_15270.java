@@ -3,7 +3,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
@@ -47,10 +46,10 @@ public class java_15270 {
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
         while (true) {
-            // 연결된 친구가 적은 순으로 정렬
-            Arrays.sort(pareCount, (num1, num2) -> {
-                return Integer.compare(num1[1], num2[1]);
-            });
+            // // 연결된 친구가 적은 순으로 정렬
+            // Arrays.sort(pareCount, (num1, num2) -> {
+            //     return Integer.compare(num1[1], num2[1]);
+            // });
 
             int nowIndex = -1;
 
