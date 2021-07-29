@@ -34,7 +34,6 @@ public class java_5576 {
         }
 
         bw.write(Wresult+" "+Kresult);
-        
 
         br.close();
         bw.close();

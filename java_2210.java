@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.HashSet;
-//import java.util.Iterator;
 import java.util.StringTokenizer;
 
 public class java_2210 {
@@ -27,6 +26,7 @@ public class java_2210 {
             return;
         }
 
+        // 1 -> 2 -> 10 + 2 -> 12
         nowResult = nowResult * 10 + board[y][x];
 
         // 이동한 위치 데이터 추가
