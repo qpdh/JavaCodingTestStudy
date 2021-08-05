@@ -15,8 +15,9 @@ public class java_1292 {
 
         while (i <= B) {
             // innerCount를 innerCount만큼 반복
+            // 
             for (int j = 0; j < innerCount; j++) {
-                //System.out.println(innerCount);
+                // System.out.println(innerCount);
 
                 if (i >= A) {
                     ret += innerCount;

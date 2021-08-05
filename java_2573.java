@@ -24,7 +24,7 @@ public class java_2573 {
             return;
 
         isVisited[y][x] = true;
-        //System.out.println("y : "+y+" x : "+x+"접근");
+        // System.out.println("y : "+y+" x : "+x+"접근");
 
         // 4방향 접근
         for (int i = 0; i < dxdy.length; i++) {
@@ -76,12 +76,13 @@ public class java_2573 {
             if (isBreak)
                 break;
         }
+        // 1,1 == 2
 
         // 찢어진 다른 곳이 존재하는가?
         for (int i = 1; i < N - 1; i++) {
             for (int j = 1; j < M - 1; j++) {
                 if (!isVisited[i][j] && iceBerg[i][j] > 0) {
-                    //System.out.println(i + " " + j + "아직 방문하지 않음. 찢어짐");
+                    // System.out.println(i + " " + j + "아직 방문하지 않음. 찢어짐");
                     isSplit = true;
                 }
             }
@@ -124,10 +125,10 @@ public class java_2573 {
 
             // System.out.println("==="+year+"===");
             // for(int i=0;i<N;i++){
-            //     for(int j=0;j<M;j++){
-            //         System.out.print(iceBerg[i][j]+ " ");
-            //     }
-            //     System.out.println();
+            // for(int j=0;j<M;j++){
+            // System.out.print(iceBerg[i][j]+ " ");
+            // }
+            // System.out.println();
             // }
 
             if (isZero) {
@@ -153,7 +154,7 @@ public class java_2573 {
                 for (int i = 1; i < N - 1; i++) {
                     for (int j = 1; j < M - 1; j++) {
                         if ((!isVisited[i][j]) && iceBerg[i][j] > 0) {
-                            //System.out.println(i + " " + j + "아직 방문하지 않음. 찢어짐");
+                            // System.out.println(i + " " + j + "아직 방문하지 않음. 찢어짐");
                             isSplit = true;
                         }
                     }
@@ -173,20 +174,18 @@ public class java_2573 {
             }
 
             if (isAllZero) {
-                //bw.write("모든 빙하가 0임"+year);
+                // bw.write("모든 빙하가 0임"+year);
                 break;
             }
 
             // 년도 추가 => 계속 녹이기
-            
+
             year++;
 
-
-            
         }
 
         if (isAllZero) {
-            //bw.write("테스트");
+            // bw.write("테스트");
             bw.write("0\n");
         } else {
             bw.write(year + "\n");
@@ -199,24 +198,23 @@ public class java_2573 {
     }
 }
 
+// 1. 분리가 되었는지 확인하는 방법?
+// 언제 확인하는가?
+// 하나의 빙산의 0이 될 때만 체크해도 됨!!!
+// 이게 제일 중요
+// 한 점에서 이동을 할 것인가?
+// visited?
+// 그래프 탐색 이용!
 
-           // 1. 분리가 되었는지 확인하는 방법?
-            // 언제 확인하는가?
-            // 하나의 빙산의 0이 될 때만 체크해도 됨!!!
-            // 이게 제일 중요
-            // 한 점에서 이동을 할 것인가?
-            // visited?
-            // 그래프 탐색 이용!
+// 덩어리 수를 체크하는 변수 가지기.
+// 0,0 ~ N,N 까지 깊이 우선 탐색 실시
+// 1, 1 에서 한 번 탐색 실시할 때 마다 1증가
+// 새로운 위치에서 탐색을 실시 할 때 새롭게 들어간 노드가 없으면 증가하지 않음
+// -> 덩어리 추출 가능
+// -> 덩어리가 2 이상이라면? 반복횟수 반환
 
-            // 덩어리 수를 체크하는 변수 가지기.
-            // 0,0 ~ N,N 까지 깊이 우선 탐색 실시
-            // 0,0에서 한 번 탐색 실시할 때 마다 1증가
-            // 새로운 위치에서 탐색을 실시 할 때 새롭게 들어간 노드가 없으면 증가하지 않음
-            // -> 덩어리 추출 가능
-            // -> 덩어리가 2 이상이라면? 반복횟수 반환
-
-            // 2. 빙산을 녹이기
-            // 배열을 돌면서
-            // 한번에 줄이기 해야함
-            // 벡터?
-            // 빙산이 있는 좌표 + 빙산의 높이 + 주변의 0의 개수
+// 2. 빙산을 녹이기
+// 배열을 돌면서
+// 한번에 줄이기 해야함
+// 벡터?
+// 빙산이 있는 좌표 + 빙산의 높이 + 주변의 0의 개수

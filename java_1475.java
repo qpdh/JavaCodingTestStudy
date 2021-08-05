@@ -20,6 +20,11 @@ public class java_1475 {
 
         // 0 ~ 9까지
         int numberList[][] = new int[9][2];
+        // 0 빈도수
+        // 1 빈도수
+        // 2 빈도수
+        // 3 
+        // 0 ~ 8 
 
         // 배열의 0 번째 열 초기화
         for (int i = 0; i < numberList.length; i++) {
