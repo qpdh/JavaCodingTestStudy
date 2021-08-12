@@ -68,7 +68,7 @@ public class java_16236 {
         boolean isChecked[][] = new boolean[N][N];
 
         isChecked[shark.y][shark.x] = true;
-        //System.out.println(shark.y + ",,," + shark.x);
+        // System.out.println(shark.y + ",,," + shark.x);
 
         // 거리 0으로 초기화
         for (int i = 0; i < N; i++) {
@@ -82,7 +82,7 @@ public class java_16236 {
         while (!fishQueue.isEmpty()) {
 
             f = fishQueue.poll();
-            //System.out.println("현재 위치 : "+f.y+" "+f.x);
+            // System.out.println("현재 위치 : "+f.y+" "+f.x);
 
             // 4방향 넣기
             // 한 칸 씩 이동
@@ -109,7 +109,7 @@ public class java_16236 {
                     continue;
                 }
 
-                //System.out.println(toY + " " + toX + "방문");
+                // System.out.println(toY + " " + toX + "방문");
 
                 // 0보다 커야하고, 상어보다 작다면?
                 // 먹을 수 있는 물고기라면?
@@ -118,9 +118,10 @@ public class java_16236 {
                     findFish.add(board[toY][toX]);
                     // System.out.println(toY + "," + toX + " 거리 : " + board[toY][toX].distance + "
                     // 물고기 삽입");
-                } else { 
+
+                } else { // 먹이를 찾았다면 먹이 위치에서 또 추가할 필요가 있을까?
                     // 거리는 한 칸 증가
-                    //System.out.println(toY + " " + toX + "삽입");
+                    // System.out.println(toY + " " + toX + "삽입");
                     // Fish inputFish = board[toY][toX];
                     // inputFish.distance = f.distance + 1;
                     board[toY][toX].distance = f.distance + 1;
@@ -195,7 +196,7 @@ public class java_16236 {
                     // 상어의 경우
                     case 9:
                         board[i][j] = new Fish(i, j, 0);
-                        shark = new Shark(i,j,0);
+                        shark = new Shark(i, j, 0);
                         break;
 
                     // 물고기의 경우
@@ -211,7 +212,7 @@ public class java_16236 {
 
         // 먹을 수 있는 물고기가 없으면 종료
         while (true) {
-            //bw.write("먹기 전 시간 : " + second + "\n");
+            // bw.write("먹기 전 시간 : " + second + "\n");
             findFish = new ArrayList<>();
 
             // 먹을 수 있는 물고기 찾기
@@ -223,7 +224,8 @@ public class java_16236 {
             }
 
             // for (Fish f : findFish) {
-            //     System.out.println("(" + f.y + ", " + f.x + ")" + " distance : " + f.distance);
+            // System.out.println("(" + f.y + ", " + f.x + ")" + " distance : " +
+            // f.distance);
             // }
 
             Collections.sort(findFish, new Comparator<Fish>() {
@@ -243,11 +245,11 @@ public class java_16236 {
             });
 
             // for (Fish f : findFish) {
-            //     System.out.println(f.y + ", " + f.x + "");
+            // System.out.println(f.y + ", " + f.x + "");
             // }
 
             // 시간 더하기
-            //bw.write(findFish.get(0).distance + "인 물고기 먹기\n");
+            // bw.write(findFish.get(0).distance + "인 물고기 먹기\n");
             second += findFish.get(0).distance;
 
             // 물고기 먹기
@@ -255,10 +257,10 @@ public class java_16236 {
 
             // System.out.println("===========");
             // for (Fish[] f : board) {
-            //     for (Fish f2 : f) {
-            //         System.out.print(f2.size + " ");
-            //     }
-            //     System.out.println();
+            // for (Fish f2 : f) {
+            // System.out.print(f2.size + " ");
+            // }
+            // System.out.println();
             // }
 
         }

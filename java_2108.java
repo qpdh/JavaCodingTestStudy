@@ -66,6 +66,7 @@ public class java_2108 {
         }
 
         // 범위
+        
         int range = intArray[N - 1] - intArray[0];
         bw.write(range + "\n");
 
