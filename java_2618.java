@@ -17,6 +17,9 @@ class Unit {
 public class java_2618 {
     final static int INF = 987654321;
     static Unit incident[];
+
+    // 가장 최근에 처리한 사건
+    // [경찰차1][경찰차2]
     static int cache[][];
 
     // AAA ABB ABA ...
@@ -102,7 +105,7 @@ public class java_2618 {
 
 
             int ay = (indexA == 0) ? 1 : incident[indexA].y;
-            int ax = (indexA == 0) ? 1 : incident[indexA].x;
+            int ax = (indexA == 0) ?  1: incident[indexA].x;
 
             int by = (indexB == 0) ? road : incident[indexB].y;
             int bx = (indexB == 0) ? road : incident[indexB].x;

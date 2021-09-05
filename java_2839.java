@@ -8,6 +8,11 @@ public class java_2839 {
     final static int INF = 987654321;
     static int cache[];
 
+    // 11kg -> 8(1) -> 5(2) -> 0(3)
+    //                  3(2) -> 0(3)
+    // 6(1) -> 3(2) -> 0(3)
+    // 1(2) -> INF
+
     // N킬로그램 배달해야 할 때
     // 최소 봉지 수를 반환
     public static int sugarDelivery(int N) {

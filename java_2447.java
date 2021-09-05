@@ -57,15 +57,7 @@ public class java_2447 {
 
     // 가운데 위치
     public static void paintStar(int y, int x, int N) {
-
-        // if (y < 0 || y >= board.length) {
-        //     return;
-        // }
-
-        // if (x < 0 || x >= board.length) {
-        //     return;
-        // }
-
+        
         if (N == 3) {
             for (int i = 0; i < dydx.length; i++) {
                 board[y + dydx[i][0]][x + dydx[i][1]] = '*';

@@ -39,6 +39,43 @@ public class java_1010 {
         return cache[N][M];
     }
 
+    public static int buildBridge2(int n, int r) {
+        if (n == r) {
+            return 1;
+        }
+
+        if (r == 1) {
+            return n;
+        }
+
+        if (cache[n][r] != -1) {
+            return cache[n][r];
+        }
+
+        cache[n][r] = buildBridge2(n - 1, r - 1) + buildBridge2(n - 1, r);
+
+        return cache[n][r];
+    }
+
+    public static long fac(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * fac(n - 1);
+    }
+
+    // nCr = n! / ((n-r)! * r!);
+    public static long calNCR(int n, int r) {
+        long A = 1;
+        for (int i = n; i > n-r; i--) {
+            A *= i;
+        }
+
+        long B = fac(r);
+
+        return A / B;
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -50,15 +87,17 @@ public class java_1010 {
             int N = Integer.parseInt(st.nextToken());
             int M = Integer.parseInt(st.nextToken());
 
-            cache = new int[N + 1][M + 1];
+            cache = new int[M + 1][N + 1];
 
-            for (int j = 0; j < N + 1; j++) {
-                for (int k = 0; k < M + 1; k++) {
+            for (int j = 0; j < M + 1; j++) {
+                for (int k = 0; k < N + 1; k++) {
                     cache[j][k] = -1;
                 }
             }
 
-            bw.write(buildBridge(N, M) + "\n");
+            // bw.write(buildBridge(N, M) + "\n");
+            // bw.write(buildBridge2(M, N) + "\n");
+            bw.write(calNCR(M, N) + "\n");
         }
 
         br.close();

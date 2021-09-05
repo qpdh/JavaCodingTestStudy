@@ -8,6 +8,19 @@ public class java_9251 {
     static String A, B;
     static int cache[][];
 
+    // 1. ACAYKP
+    // 2. CAPCAK
+
+    // ACAK
+
+    // 1. 2. 를 옮기는 경우
+
+    // 1. CAYKP
+    // 2. CAPCAK
+
+    // ACAK
+    // ACAK
+
     // A의 인덱스, B의 인덱스로 시작하는 공통 부분 수열 찾기
     public static int LCS(int indexA, int indexB) {
         // 둘 중 하나가 끝까지 다 탐색하면 종료
