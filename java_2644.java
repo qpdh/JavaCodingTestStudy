@@ -28,7 +28,7 @@ public class java_2644 {
 
         while (!queue.isEmpty()) {
             int nowNode = queue.poll();
-            System.out.println("현재 위치 : " + nowNode);
+            // System.out.println("현재 위치 : " + nowNode);
 
             for (int i = 0; i < adjList.get(nowNode).size(); i++) {
                 // 방문하지 않은 상태이면...
@@ -43,7 +43,6 @@ public class java_2644 {
         // x에서 y로 갈 수 없으면...
         // -1 반환
         return villager[y];
-
     }
 
     public static void main(String[] args) throws IOException {
