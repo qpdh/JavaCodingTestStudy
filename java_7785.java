@@ -17,7 +17,7 @@ public class java_7785 {
 
 		int n = Integer.parseInt(br.readLine());
 
-		TreeSet<String> resultTreeSet = new TreeSet(Collections.reverseOrder());
+		TreeSet<String> resultTreeSet = new TreeSet<String>(Collections.reverseOrder());
 
 		for (int i = 0; i < n; i++) {
 			String data = br.readLine();

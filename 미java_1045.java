@@ -6,15 +6,17 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-public class java_1045 {
+public class 미java_1045 {
     static Vector<Vector<Integer>> adj;
 
     public static void solve() {
-        for(int i=0;i<adj.size();i++){
-            if(adj.get(i).size()==2){
-                System.out.println(i+"는 2개의 도로를 갖고 있음");
+        for (int i = 0; i < adj.size(); i++) {
+            if (adj.get(i).size() == 2) {
+                System.out.println(i + "는 2개의 도로를 갖고 있음");
             }
         }
+
+        
     }
 
     public static void main(String[] args) throws IOException {
@@ -43,6 +45,8 @@ public class java_1045 {
                     adj.get(i).add(j);
                 }
             }
+
+            
         }
 
         solve();

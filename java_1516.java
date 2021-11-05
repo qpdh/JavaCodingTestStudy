@@ -15,17 +15,27 @@ public class java_1516 {
     static int cache[];
 
     public static void solve(int now) {
-        // 각 건물이 완성되기 까지 걸리는 시간 저장
-
-
-
         // 이미 완성까지 걸리는 시간이 존재하면..
         if (cache[now] != -1) {
             return;
         }
 
-        //
         int maxLength = 0;
+
+        // A 건물을 짓기 위해서 B, C, D 건물이 선행되어야 한다.
+
+        // 2-1 B 건물을 짓기 위해 걸리는 시간이 존재한다.
+        // 지금까지 저장된 B 건물을 짓기 위해 걸리는 시간보다 긴가?\
+
+        // 2-2 B 건물을 짓기 위해 걸리는 시간이 존재하지 않는다.
+        // B 건물을 짓기 위해 걸리는 시간 탐색
+
+        // B, C, D 동일하게 동작..
+        // A 건물 짓기 위해서 B, C, D 건물이 선행되어야 하므로
+        // B= 20, C= 50, D= 40 중 가장 건설시간이 오래 걸리는 건물 이후에 지을 수 있다.
+        // 50 + A 건물 짓는 시간
+
+        // C를 짓기 위해 E 가 선행되어야 한다.
         for (int i = 0; i < adj.get(now).size(); i++) {
             int next = adj.get(now).get(i);
 
