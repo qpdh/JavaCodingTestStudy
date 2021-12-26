@@ -11,15 +11,13 @@ public class java_2921 {
 
         int N = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < N; i++) {
-            for (int j = N - i - 1; j > 0; j--) {
-                bw.write(" ");
-            }
-            for (int j = 0; j <= i; j++) {
-                bw.write("* ");
-            }
-            bw.write("\n");
+        int result = 3;
+
+        for (int i = 2; i <= N; i++) {
+            result += (i + 1) * i + i * (i + 1) / 2;
         }
+
+        bw.write(result + "");
 
         bw.close();
         br.close();
