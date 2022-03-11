@@ -16,7 +16,6 @@ public class 미java_1045 {
             }
         }
 
-        
     }
 
     public static void main(String[] args) throws IOException {
@@ -46,7 +45,6 @@ public class 미java_1045 {
                 }
             }
 
-            
         }
 
         solve();
