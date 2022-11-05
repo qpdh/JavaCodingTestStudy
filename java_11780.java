@@ -62,6 +62,9 @@ public class java_11780 {
         return true;
     }
 
+    // j -> ... -> i -> ... -> k
+    // transitBoard[j][i] 가장 최소비용이 그냥 가는거다 == -1
+    // if 저 위에가 -1이다 -> 바로 저장
     static void floydWarshall() {
         // i 를 경유하고
         for (int i = 0; i < n; i++) {
