@@ -8,6 +8,9 @@ public class java_5582 {
     static int cache[][];
 
     // firstIndex 시작하고, secondIndex(포함) 시작하는 공통 부분 문자열의 최댓값 저장
+    // abcabcabc
+    // bcbcbc
+    // bcbcbc
     static int dp(int firstIndex, int secondIndex) {
         if (firstIndex >= firstWord.length() || secondIndex >= secondWord.length()) {
             return 0;
